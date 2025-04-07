@@ -2,16 +2,6 @@
 
 This script is an AI-powered financial analyst that summarizes company finances, provides pros and cons, and makes recommendations based on the provided financial information. It uses the OpenAI API or an open-source model from Ollama to generate the analysis.
 
-[Video Demo of Applications of Large Language Models](https://www.youtube.com/watch?v=FW4WueDzxTI)
-
-[Article on using LLMs for financial analysis and algorithmic trading](https://medium.com/p/146d67c52cdb)
-
-## Check out NexusTrade
-
-For a fully functional platform, [check out NexusTrade](https://nexustrade.io/). NexusTrade is a AI-Powered automated trading and investment platform that allows users to create, test, optimize, and deploy algorithmic trading strategies. It's fast, configurable, easy to use, and requires no code!
-
-NexusTrade has this feature implemented in it's [AI-Powered Chat](https://nexustrade.io/chat). It requires no setup and it's easy for everybody, even non-developers, to use. Just create an account and try it out.
-
 ## Installation
 
 To run the script, you need to have the following packages installed:
@@ -38,100 +28,97 @@ OPENAI_API_KEY=YOUR_OPENAI_API_KEY
 
 Replace `YOUR_SIMFIN_API_KEY` with your SimFin API token and `YOUR_OPENAI_API_KEY` with your OpenAI API key.
 
-## Setting Up Ollama
 
-To use Ollama as an alternative to OpenAI, follow these steps:
 
-1. **Download Ollama**: Go to [ollama.com/download](https://ollama.com/download) and download the appropriate version for your operating system.
-
-2. **Download the Model**: Visit [ollama.com/library/llama3.1](https://ollama.com/library/llama3.1) to download the model you want to use.
-
-3. **(Optional) Set the Environment Variable**: If Ollama is not running on the default port, you must set up the following environment variable in your `.env` file:
-
-```plaintext
-OLLAMA_SERVICE_URL=http://localhost:11434
-```
 
 ## Usage
 
-To use the AI Financial Analyst with OpenAI, run the following command:
+To use the AI Financial Analyst with Deepseek, run the following command:
 
 ```
 python chat.py
-```
-
-To use it with Ollama, run this command instead:
-
-```
-python chat.py --use-ollama
 ```
 
 The script will provide a summary of the company's finances based on the provided financial information. It will analyze the balance sheet, cash flow, profitability metrics, liquidity metrics, solvency metrics, cash flow metrics, and other important metrics. The script will also provide a recommendation based on the analysis.
 
 ## Output
 
-Here is an example output from running the script on Apple for Q1 2023:
+Here is an example output from running the script on Apple for Q1 2024:
 
 ```
-AI Assistant:  Based on the provided financial information, here is a summary of the company's finances:
+Ryzen@MadanDS MINGW64 ~/Downloads/FinLLM
+$ python chat.py
+Hi! I'm an AI that helps you perform financial analysis.
+What stock do you want to analyze? For example, you can say 'I'm interested in AAPL'.
+I'm interested in AAPL
+Great! You've mentioned AAPL. Could you please specify the year you're interested in?
+2024 q1
+Thank you! You've provided the year (2024) and the period (q1) for AAPL. Give me a moment to analyze the data.
+### **Financial Summary in Plain English**  
 
-1. Balance Sheet:
-   - Total Assets: $346,747,000,000
-   - Total Liabilities: $290,020,000,000
-   - Total Equity: $56,727,000,000
+Let’s break down the company’s financial health in simple terms:
 
-   The company has a strong balance sheet with a significant amount of assets compared to its liabilities. This indicates a healthy financial position.
+#### **1. What the Company Owns (Assets) vs. Owes (Liabilities & Equity)**
+- **Cash & Investments:** $73.1 billion (a strong cash position).
+- **Money Owed to Them (Receivables):** $50 billion (customers owe them money).
+- **Inventory:** $6.5 billion (products waiting to be sold).
+- **Total Assets:** $353.5 billion (everything the company owns).
+- **Total Liabilities:** $279.4 billion (what the company owes, including debt).
+- **Equity (Owner’s Value):** $74.1 billion (what’s left after paying debts).
 
-2. Cash Flow:
-   - Net Cash from Operating Activities: $34,005,000,000
-   - Net Cash from Investing Activities: -$1,445,000,000
-   - Net Cash from Financing Activities: -$35,563,000,000
-   - Net Change in Cash: -$3,003,000,000
+#### **2. Income & Profitability**
+- **Revenue (Sales):** $119.6 billion.
+- **Gross Profit (After Cost of Goods Sold):** $54.9 billion (45.9% profit margin).
+- **Operating Profit:** $40.4 billion (33.8% margin, meaning they keep ~34 cents per dollar after expenses).
+- **Net Profit:** ~$33.9 billion (28.4% margin, final profit after all costs).
 
-   The company generated positive cash flow from its operating activities, but had negative cash flow from investing and financing activities. As a result, there was a decrease in cash during the period.
+#### **3. Debt & Financial Health**
+- **Total Debt:** $108 billion (a mix of short-term and long-term).
+- **Current Ratio (Can They Pay Bills?):** 1.07 (they have just enough to cover short-term debts).
+- **Debt-to-Equity Ratio:** 3.77 (high debt compared to equity, which can be risky).
+- **Free Cash Flow:** $37.5 billion (money left after expenses and investments).
 
-3. Profitability Metrics:
-   - Gross Profit Margin: 42.96%
-   - Operating Margin: 30.74%
-   - Net Profit Margin: 25.61%
-   - Return on Equity: 52.88%
-   - Return on Assets: 8.65%
-   - Return on Invested Capital: 15.28%
+#### **4. Efficiency & Returns**
+- **Return on Equity (ROE):** 45.8% (very high, meaning they generate strong profits from shareholder money).
+- **Return on Assets (ROA):** 9.6% (good, but not as strong as ROE).
+- **Piotroski F-Score:** 9/9 (excellent financial health score).
 
-   The company has healthy profitability metrics, indicating efficient operations and good returns on investment.
+---
 
-4. Liquidity Metrics:
-   - Current Ratio: 1.01
+### **Pros & Cons**
 
-   The company has a current ratio slightly above 1, which suggests it has enough current assets to cover its short-term liabilities. However, it is important to note that a current ratio of exactly 1 may indicate limited liquidity.
+#### **👍 Pros:**
+✅ **Strong Cash Position** ($73.1 billion) means they can handle emergencies or invest in growth.
+✅ **High Profit Margins** (~28-34%)—they make a lot of money from sales.
+✅ **Excellent Free Cash Flow** ($37.5 billion) means they generate cash efficiently.
+✅ **High Return on Equity (45.8%)**—great for shareholders.
+✅ **Perfect Piotroski Score (9/9)**—financially very healthy.
 
-5. Solvency Metrics:
-   - Liabilities to Equity Ratio: 5.11
-   - Debt Ratio: 32.04%
+#### **👎 Cons:**
+❌ **High Debt ($108 billion)**—could be risky if interest rates rise or profits drop.
+❌ **Low Current Ratio (1.07)**—barely enough to cover short-term bills.
+❌ **High Debt-to-Equity (3.77)**—relies heavily on borrowing.
 
-   The company has a relatively high liabilities to equity ratio, indicating a significant amount of debt compared to equity. The debt ratio is moderate, suggesting that a significant portion of the company's assets is financed by debt.
+---
 
-6. Cash Flow Metrics:
-   - Free Cash Flow: $39,273,000,000
-   - Free Cash Flow to Net Income: 1.31
-   - Cash Return on Invested Capital: 17.77%
+### **Recommendation**
+### **Recommendation**
+### **Recommendation**
+This company is **financially strong** with high profitability and cash flow, but it carries **significant debt**.
+### **Recommendation**
+### **Recommendation**
+### **Recommendation**
+This company is **financially strong** with high profitability and cash flow, but it carries **significant debt**.
 
-   The company has positive free cash flow, indicating its ability to generate cash after accounting for capital expenditures. The free cash flow to net income ratio suggests that the company is efficient in converting its net income into free cash flow. The cash return on invested capital is also positive, indicating good returns on the capital invested.
+- **If you’re a long-term investor**, the strong returns and cash flow make it attractive.
+- **If you’re risk-averse**, the high debt might be concerning.
 
-7. Other Important Metrics:
-   - Piotroski F-Score: 4
-   - Net Debt / EBITDA: 1.53
-   - Dividend Payout Ratio: 12.56%
+⚠️ **Always do your own research before investing.** This is just a guide to help you understand the basics.
 
-   The Piotroski F-Score of 4 suggests that the company has a moderate financial strength. The net debt to EBITDA ratio indicates the company's ability to repay its debt, with a ratio of 1.53. The dividend payout ratio suggests that the company distributes a portion of its earnings as dividends.
+---
 
-Based on the provided information, the company appears to be in a strong financial position with healthy profitability metrics and positive cash flow. However, it is important to conduct further research and analysis to fully understand the company's financial health and prospects.
-```
-
-## Attribution
-
-This script utilizes the SimFin API for retrieving company financial information and the OpenAI API for generating the AI analysis.
-
-## Disclaimer
-
-Please note that this script should be used as a starting point and not as financial advice. It is important to conduct further research and analysis before making any investment decisions.
+### **Sources**
+For more detailed information, you can refer to:
+- [SEC Filing (Balance Sheet)](https://www.sec.gov/Archives/edgar/data/320193/000032019324000006/0000320193-24-000006-index.htm)
+- [SEC Filing (Cash Flow)](https://www.sec.gov/Archives/edgar/data/320193/000032019325000008/0000320193-25-000008-index.htm)
+- [SEC Filing (Income Statement)](https://www.sec.gov/Archives/edgar/data/320193/000032019325000008/0000320193-25-000008-index.htm)
