@@ -1,6 +1,6 @@
-# Fin(ancial) An(alyst) GPT – a tool to analyze company's financials
+# Financial Analysis Deepseek – a tool to analyze company's financials
 
-This script is an AI-powered financial analyst that summarizes company finances, provides pros and cons, and makes recommendations based on the provided financial information. It uses the OpenAI API or an open-source model from Ollama to generate the analysis.
+This script is an AI-powered financial analysis that summarizes company finances, provides pros and cons, and makes recommendations based on the provided financial information. It uses the OpenAI API or an open-source model from Ollama to generate the analysis.
 
 ## Installation
 
